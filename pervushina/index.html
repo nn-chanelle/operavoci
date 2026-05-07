@@ -1,1 +1,735 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Творческая встреча с Екатериной Первушиной — Voci dell'Opera</title>
+<meta name="description" content="Камерная творческая встреча с примой-балериной театра «Кремлёвский балет» Екатериной Первушиной. 24 мая, Москва. Только 15 мест." />
 
+<!-- Open Graph -->
+<meta property="og:title" content="Творческая встреча с Екатериной Первушиной" />
+<meta property="og:description" content="Камерный вечер с примой-балериной «Кремлёвского балета». 24 мая, Москва." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/logo.jpg" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+
+<!-- Fonts: Cormorant Garamond (display serif), Marck Script (handwritten Cyrillic), Inter (body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Marck+Script&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --cream: #faf4e8;
+    --cream-deep: #f3e9d2;
+    --paper: #fffbf3;
+    --bordeaux: #6b1e2a;
+    --bordeaux-deep: #4a131c;
+    --gold: #b89766;
+    --gold-light: #d8b87a;
+    --ink: #2a1a16;
+    --ink-soft: #5a4640;
+    --line: rgba(184, 151, 102, 0.35);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.65;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* — Decorative paper texture — */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse at 20% 10%, rgba(216, 184, 122, 0.08), transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(107, 30, 42, 0.05), transparent 55%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* — Container — */
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 28px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* — Top bar with logo — */
+  .topbar {
+    padding: 28px 0 16px;
+    text-align: center;
+  }
+  .topbar img {
+    max-width: 220px;
+    width: 50%;
+    height: auto;
+    opacity: 0.95;
+  }
+
+  /* — Hero — */
+  .hero {
+    text-align: center;
+    padding: 36px 0 60px;
+    position: relative;
+  }
+
+  .eyebrow {
+    font-family: 'Marck Script', cursive;
+    font-size: clamp(22px, 2.6vw, 30px);
+    color: var(--bordeaux);
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(44px, 6.8vw, 86px);
+    line-height: 1;
+    letter-spacing: -0.5px;
+    color: var(--ink);
+    margin: 8px 0 6px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--bordeaux);
+  }
+
+  .hero .with-name {
+    font-family: 'Marck Script', cursive;
+    font-size: clamp(34px, 4.6vw, 58px);
+    color: var(--bordeaux-deep);
+    line-height: 1.05;
+    margin-top: 10px;
+  }
+
+  .hero .role {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(17px, 1.8vw, 22px);
+    color: var(--ink-soft);
+    margin-top: 16px;
+    letter-spacing: 0.3px;
+  }
+
+  /* — Gold ornamental divider — */
+  .ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin: 32px auto;
+    color: var(--gold);
+  }
+  .ornament .line {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .ornament .diamond {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    transform: rotate(45deg);
+  }
+  .ornament .star {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--gold);
+    letter-spacing: 8px;
+    line-height: 1;
+  }
+
+  /* — Portrait section — */
+  .portrait-section {
+    padding: 20px 0 72px;
+    text-align: center;
+    position: relative;
+  }
+
+  .portrait-frame {
+    display: inline-block;
+    position: relative;
+    padding: 18px;
+    background:
+      linear-gradient(135deg, var(--paper) 0%, var(--cream-deep) 100%);
+    border: 1px solid var(--line);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.6) inset,
+      0 30px 60px -20px rgba(74, 19, 28, 0.18),
+      0 12px 24px -12px rgba(74, 19, 28, 0.12);
+    border-radius: 4px;
+  }
+  .portrait-frame::before {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border: 1px solid var(--gold);
+    opacity: 0.4;
+    border-radius: 2px;
+    pointer-events: none;
+  }
+  .portrait-frame .photo {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+    background:
+      linear-gradient(180deg, #efe3cd 0%, #d9c8a8 100%);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .portrait-frame .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .portrait-caption {
+    margin-top: 22px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--ink-soft);
+    letter-spacing: 0.3px;
+  }
+
+  /* — Section heading — */
+  .section-eyebrow {
+    font-family: 'Marck Script', cursive;
+    font-size: 28px;
+    color: var(--bordeaux);
+    margin-bottom: 4px;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(34px, 4.4vw, 52px);
+    color: var(--ink);
+    line-height: 1.1;
+    margin-bottom: 18px;
+    letter-spacing: -0.3px;
+  }
+
+  /* — About event — */
+  .about {
+    padding: 60px 0;
+    text-align: center;
+  }
+  .about p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 1.9vw, 22px);
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 720px;
+    margin: 0 auto 14px;
+    font-weight: 400;
+  }
+
+  /* — What awaits — list — */
+  .programme {
+    margin: 50px 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 28px;
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .programme .item {
+    text-align: center;
+    padding: 28px 16px 24px;
+    border-top: 1px solid var(--line);
+    position: relative;
+  }
+  .programme .item::before {
+    content: '◆';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gold);
+    background: var(--cream);
+    font-size: 12px;
+    padding: 0 8px;
+  }
+  .programme .item .label {
+    font-family: 'Marck Script', cursive;
+    font-size: 26px;
+    color: var(--bordeaux);
+    margin-bottom: 6px;
+    line-height: 1;
+  }
+  .programme .item .desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--ink-soft);
+    font-weight: 300;
+    letter-spacing: 0.2px;
+  }
+
+  /* — Details card — */
+  .details {
+    padding: 80px 0;
+  }
+  .details-card {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 52px 48px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.6) inset,
+      0 24px 48px -20px rgba(74, 19, 28, 0.15);
+    position: relative;
+  }
+  .details-card::after {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border: 1px solid var(--gold);
+    opacity: 0.3;
+    border-radius: 3px;
+    pointer-events: none;
+  }
+  .details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 48px;
+    margin-top: 36px;
+  }
+  .details-grid .item .key {
+    font-family: 'Marck Script', cursive;
+    font-size: 22px;
+    color: var(--bordeaux);
+    margin-bottom: 4px;
+  }
+  .details-grid .item .val {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--ink);
+    font-weight: 500;
+    line-height: 1.3;
+  }
+  .details-grid .item .sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    font-weight: 300;
+  }
+
+  .price-line {
+    margin-top: 44px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+  }
+  .price-line .price-tag {
+    font-family: 'Marck Script', cursive;
+    font-size: 24px;
+    color: var(--bordeaux);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .price-line .price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(46px, 6vw, 68px);
+    font-weight: 500;
+    color: var(--bordeaux-deep);
+    line-height: 1;
+  }
+  .price-line .price-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  .price-line .price-after {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 14px;
+    opacity: 0.75;
+  }
+
+  /* — CTA — */
+  .cta-wrap {
+    text-align: center;
+    padding: 24px 0 90px;
+  }
+  .cta {
+    display: inline-block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--cream);
+    background: var(--bordeaux);
+    padding: 22px 56px;
+    text-decoration: none;
+    border-radius: 2px;
+    border: 1px solid var(--bordeaux-deep);
+    box-shadow: 0 16px 32px -12px rgba(74,19,28,0.45);
+    transition: all 0.25s ease;
+    position: relative;
+  }
+  .cta:hover {
+    background: var(--bordeaux-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 22px 40px -14px rgba(74,19,28,0.55);
+  }
+  .cta-note {
+    margin-top: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 15px;
+  }
+  .cta-finep {
+    margin-top: 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: var(--ink-soft);
+    opacity: 0.65;
+    letter-spacing: 0.3px;
+    font-weight: 300;
+  }
+
+  /* — Early bird banner — */
+  .early-bird {
+    padding: 10px 0 30px;
+    text-align: center;
+  }
+  .early-bird-inner {
+    display: inline-block;
+    border: 1px solid var(--bordeaux);
+    border-radius: 4px;
+    padding: 22px 56px;
+    background: var(--paper);
+    position: relative;
+    box-shadow: 0 12px 28px -16px rgba(74,19,28,0.25);
+  }
+  .early-bird-inner::before,
+  .early-bird-inner::after {
+    content: '◆';
+    color: var(--gold);
+    position: absolute;
+    font-size: 9px;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+  }
+  .early-bird-inner::before { left: 16px; }
+  .early-bird-inner::after { right: 16px; }
+  .eb-pulse {
+    font-family: 'Marck Script', cursive;
+    font-size: 24px;
+    color: var(--bordeaux);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .eb-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 2.4vw, 26px);
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+  .eb-detail {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink-soft);
+    margin-top: 6px;
+  }
+
+  /* — About Voci — */
+  .voci-block {
+    background: var(--cream-deep);
+    padding: 70px 0;
+    margin: 30px 0 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .voci-block .container {
+    text-align: center;
+  }
+  .voci-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(22px, 2.6vw, 30px);
+    line-height: 1.45;
+    color: var(--ink);
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .voci-quote::before, .voci-quote::after {
+    color: var(--gold);
+    font-size: 1.4em;
+    font-style: normal;
+    line-height: 0;
+    position: relative;
+    top: 0.15em;
+  }
+  .voci-quote::before { content: '«'; margin-right: 6px; }
+  .voci-quote::after { content: '»'; margin-left: 6px; }
+
+  .voci-sig {
+    font-family: 'Marck Script', cursive;
+    font-size: 32px;
+    color: var(--bordeaux);
+    margin-top: 26px;
+  }
+
+  /* — Footer — */
+  footer {
+    padding: 50px 0 60px;
+    text-align: center;
+  }
+  footer .socials {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 18px 0;
+    flex-wrap: wrap;
+  }
+  footer .socials a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+  }
+  footer .socials a:hover {
+    color: var(--bordeaux);
+    border-color: var(--bordeaux);
+  }
+  footer .legal {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--ink-soft);
+    opacity: 0.7;
+    margin-top: 18px;
+    font-weight: 300;
+  }
+
+  /* — Mobile — */
+  @media (max-width: 640px) {
+    .details-card { padding: 40px 26px; }
+    .details-grid { grid-template-columns: 1fr; gap: 28px; }
+    .cta { padding: 18px 40px; font-size: 18px; letter-spacing: 1.5px; }
+  }
+
+  /* — Reveal on scroll (subtle) — */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container">
+    <img src="assets/logo.jpg" alt="Voci dell'Opera" />
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">журнал Voci dell'Opera представляет</div>
+    <h1>Творческая <em>встреча</em></h1>
+    <div class="with-name">с Екатериной Первушиной</div>
+    <div class="role">прима-балерина театра «Кремлёвский балет»</div>
+
+    <div class="ornament">
+      <span class="line"></span>
+      <span class="diamond"></span>
+      <span class="line"></span>
+    </div>
+
+    <div class="portrait-section">
+      <div class="portrait-frame">
+        <div class="photo">
+          <img src="assets/katya.jpeg" alt="Екатерина Первушина" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about fade-in">
+  <div class="container">
+    <h2 class="section-title">Камерный разговор и&nbsp;бокал игристого</h2>
+    <p>
+      Уютный вечер для небольшой аудитории — без&nbsp;сцены, на&nbsp;расстоянии вытянутой&nbsp;руки.
+      Только живой разговор, искренние истории и&nbsp;возможность задать вопросы прима-балерине лично.
+    </p>
+    <p>
+      Поговорим о&nbsp;том, как изменилась жизнь Кати после рождения ребёнка,
+      о&nbsp;возвращении в&nbsp;театр после декретного отпуска,
+      о&nbsp;майской премьере «Тщетной предосторожности» и&nbsp;творческих планах артистки.
+    </p>
+
+    <div class="programme">
+      <div class="item">
+        <div class="label">Фуршет</div>
+        <div class="desc">приветственный бокал игристого и&nbsp;закуски</div>
+      </div>
+      <div class="item">
+        <div class="label">Беседа</div>
+        <div class="desc">живой разговор с&nbsp;Екатериной</div>
+      </div>
+      <div class="item">
+        <div class="label">Нетворкинг</div>
+        <div class="desc">встреча с&nbsp;ценителями оперы и&nbsp;балета</div>
+      </div>
+      <div class="item">
+        <div class="label">Фотосессия</div>
+        <div class="desc">кадры с&nbsp;артисткой на&nbsp;память</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="details fade-in">
+  <div class="container">
+    <div class="details-card">
+      <div style="text-align:center;">
+        <div class="section-eyebrow">детали встречи</div>
+        <h2 class="section-title">24 мая, суббота</h2>
+      </div>
+
+      <div class="ornament">
+        <span class="line"></span>
+        <span class="star">·</span>
+        <span class="line"></span>
+      </div>
+
+      <div class="details-grid">
+        <div class="item">
+          <div class="key">когда</div>
+          <div class="val">24 мая, 16:00</div>
+          <div class="sub">встреча на&nbsp;фуршет с&nbsp;15:30</div>
+        </div>
+        <div class="item">
+          <div class="key">где</div>
+          <div class="val">Brooms</div>
+          <div class="sub">проспект Мира, 116 · м.&nbsp;Алексеевская</div>
+        </div>
+        <div class="item">
+          <div class="key">сколько мест</div>
+          <div class="val">всего 15</div>
+          <div class="sub">камерный формат</div>
+        </div>
+        <div class="item">
+          <div class="key">дресс-код</div>
+          <div class="val">smart casual / коктейль</div>
+          <div class="sub">если хочется сиять&nbsp;— выбирайте коктейльное</div>
+        </div>
+      </div>
+
+      <div class="price-line">
+        <div class="price-tag">early&nbsp;bird · первые 5 билетов</div>
+        <div class="price">3&nbsp;000&nbsp;₽</div>
+        <div class="price-note">фуршет включён</div>
+        <div class="price-after">далее&nbsp;— 3&nbsp;800&nbsp;₽</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="early-bird fade-in">
+  <div class="container">
+    <div class="early-bird-inner">
+      <div class="eb-pulse">не упустите</div>
+      <div class="eb-headline">количество мест ограничено</div>
+      <div class="eb-detail">первые 5 билетов&nbsp;— по&nbsp;3&nbsp;000&nbsp;₽ вместо 3&nbsp;800&nbsp;₽</div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-wrap">
+  <div class="container">
+    <a class="cta" href="#" id="ticketLink">забронировать билет</a>
+    <div class="cta-note">бронирование через TimePad · оплата онлайн</div>
+    <div class="cta-finep">Возврат билетов осуществляется не позднее чем за 24 часа до мероприятия</div>
+  </div>
+</div>
+
+<section class="voci-block fade-in">
+  <div class="container">
+    <div class="voci-quote">
+      Voci dell'Opera — журнал об&nbsp;опере, балете и&nbsp;искусстве,
+      который собирает камерные встречи с&nbsp;артистами,
+      где вместо сцены — разговор за&nbsp;бокалом игристого.
+    </div>
+    <div class="voci-sig">с любовью к&nbsp;искусству</div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="ornament" style="margin: 0 auto 4px;">
+      <span class="line"></span>
+      <span class="diamond"></span>
+      <span class="line"></span>
+    </div>
+    <div class="socials">
+      <a href="https://instagram.com/operavoci" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://t.me/operavoci" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://vk.com/operavoci" target="_blank" rel="noopener">ВКонтакте</a>
+    </div>
+    <div class="legal">© Voci dell'Opera · 2026 · с&nbsp;любовью</div>
+  </div>
+</footer>
+
+<script>
+  // Subtle reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

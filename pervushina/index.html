@@ -201,6 +201,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 15%;
     display: block;
   }
 
@@ -533,12 +534,24 @@
     color: var(--bordeaux);
     border-color: var(--bordeaux);
   }
+  footer .meta-note {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    color: var(--ink-soft);
+    opacity: 0.55;
+    margin-top: 14px;
+    font-weight: 300;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+  }
   footer .legal {
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     color: var(--ink-soft);
     opacity: 0.7;
-    margin-top: 18px;
+    margin-top: 14px;
     font-weight: 300;
   }
 
@@ -685,7 +698,7 @@
 
 <div class="cta-wrap">
   <div class="container">
-    <a class="cta" href="#" id="ticketLink">забронировать билет</a>
+    <a class="cta" href="#" id="timepad_twf_register_3972793">забронировать билет</a>
     <div class="cta-note">бронирование через TimePad · оплата онлайн</div>
     <div class="cta-finep">Возврат билетов осуществляется не позднее чем за 24 часа до мероприятия</div>
   </div>
@@ -710,10 +723,11 @@
       <span class="line"></span>
     </div>
     <div class="socials">
-      <a href="https://instagram.com/operavoci" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://t.me/operavoci" target="_blank" rel="noopener">Telegram</a>
-      <a href="https://vk.com/operavoci" target="_blank" rel="noopener">ВКонтакте</a>
+      <a href="https://t.me/vocidellopera" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.instagram.com/operavoci" target="_blank" rel="noopener">Instagram*</a>
+      <a href="https://vk.ru/operavoci" target="_blank" rel="noopener">ВКонтакте</a>
     </div>
+    <div class="meta-note">*&nbsp;Meta&nbsp;Platforms&nbsp;Inc. (владелец Instagram) признана экстремистской организацией, её деятельность запрещена на&nbsp;территории&nbsp;РФ</div>
     <div class="legal">© Voci dell'Opera · 2026 · с&nbsp;любовью</div>
   </div>
 </footer>
@@ -729,6 +743,19 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+</script>
+
+<!-- TimePad widget: open registration popup on CTA click -->
+<script async defer charset="UTF-8"
+  data-timepad-customized="164350"
+  data-timepad-widget-v2="event_register"
+  src="https://timepad.ru/js/tpwf/loader/min/loader.js">
+(function(){return {
+  "event": { "id": 3972793 },
+  "hidePreloading": true,
+  "display": "popup",
+  "popup": { "triggerSelector": "#timepad_twf_register_3972793" }
+}})();
 </script>
 
 </body>
